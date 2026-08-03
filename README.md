@@ -15,7 +15,7 @@ code itself.
 Digital signature platform with legal validity for Latin America, built around a single
 promise: signing a document through Pix in under a minute.
 
-| Project | Description |
+| Feature | Description |
 |---|---|
 | **FinanceID** | Patented core technology that turns a Pix transaction into an identity for signing. The signer confirms a R$ 0.01 Pix, bank KYC validates who they are, and a single use certificate is issued to sign the document. No prior certificate, no installation. |
 | **CSC broker** | Acts as CSC (Cloud Signature Consortium) client and server at the same time, routing a signature either to other CSC providers or to national ones such as gov.br. Positions the platform as a single interoperability point between the international standard and the Brazilian signature ecosystem. |
@@ -30,7 +30,7 @@ promise: signing a document through Pix in under a minute.
 |---|---|
 | **Hawa** | Issuance and lifecycle management of digital certificates: validation, issuance and signing, CRL generation and an OCSP service. It backs the gov.br electronic signer, responsible for more than 500 thousand signatures a day. I had a central role in its migration to post-quantum cryptography, adding support for quantum resistant algorithms. |
 | **Amanajé** | Java library for talking to Hardware Security Modules over KMIP, co-created from scratch. I worked on the protocol decoder, the component that reads the binary TTLV encoding and makes every HSM operation in the library possible. |
-| **pkcs11-psc** | PKCS#11 interface for key management and digital signatures backed by HSMs, part of a Trusted Service Provider implementation under DOC ICP 17.01. I proposed the structural base and the design patterns it uses today. |
+| **Urutau** | PKCS#11 interface in C++ for key management and digital signatures backed by HSMs, part of a Trusted Service Provider implementation under DOC ICP 17.01, in use at a private institution. I proposed the structural base and the design patterns it uses today. |
 | **Ybyra** | Issuance and management of attribute certificates, assigning roles, permissions or qualifications to a digital identity. |
 
 ---
@@ -54,7 +54,7 @@ Hyperledger Indy, Aries and AnonCreds.
 
 ### Stack
 
-<code>Java</code> <code>Quarkus</code> <code>GraalVM native image</code> <code>Bouncy Castle</code>
+<code>Java</code> <code>Spring Boot</code> <code>Quarkus</code> <code>GraalVM native image</code> <code>Bouncy Castle</code>
 <code>PKCS#11</code> <code>PKCS#12</code> <code>KMIP</code> <code>HSM</code> <code>PKI</code>
 <code>ICP-Brasil</code> <code>CSC</code> <code>OAuth2</code> <code>PostgreSQL</code>
 <code>Redis</code> <code>Docker</code> <code>Python</code> <code>C++</code>
